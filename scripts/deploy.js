@@ -7,19 +7,16 @@
 const hre = require("hardhat");
 
 async function main() {
-  const BoredApeYachtClub = await hre.ethers.getContractFactory(
-    "BoredApeYachtClub"
+  const ForgottenRunesWizardsCult = await hre.ethers.getContractFactory(
+    "ForgottenRunesWizardsCult"
   );
-  const boredApeYachtClub = await BoredApeYachtClub.deploy(
-    "BoredApeYachtClub",
-    "BAYC",
-    10000,
-    1619060439
+  const forgottenRunesWizardsCult = await ForgottenRunesWizardsCult.deploy();
+
+  await forgottenRunesWizardsCult.deployed();
+
+  console.log(
+    `ForgottenRunesWizardsCult eployed to ${forgottenRunesWizardsCult.address}`
   );
-
-  await boredApeYachtClub.deployed();
-
-  console.log(`BoredApeYachtClub deployed to ${boredApeYachtClub.address}`);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
