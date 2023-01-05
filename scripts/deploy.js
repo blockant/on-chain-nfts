@@ -7,16 +7,14 @@
 const hre = require("hardhat");
 
 async function main() {
-  const ForgottenRunesWizardsCult = await hre.ethers.getContractFactory(
-    "ForgottenRunesWizardsCult"
+  const AvastarPrimeMinter = await hre.ethers.getContractFactory(
+    "AvastarPrimeMinter"
   );
-  const forgottenRunesWizardsCult = await ForgottenRunesWizardsCult.deploy();
+  const avastarPrimeMinter = await AvastarPrimeMinter.deploy();
 
-  await forgottenRunesWizardsCult.deployed();
+  await avastarPrimeMinter.deployed();
 
-  console.log(
-    `ForgottenRunesWizardsCult eployed to ${forgottenRunesWizardsCult.address}`
-  );
+  console.log(`AvastarPrimeMinter eployed to ${avastarPrimeMinter.address}`);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
