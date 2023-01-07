@@ -2,6 +2,7 @@
 
 // /** @type import('hardhat/config').HardhatUserConfig */
 // module.exports = {
+//   // defaultNetwork: allowUnlimitedContractSize: true ,
 //   solidity: "0.5.14",
 // };
 
@@ -16,6 +17,8 @@ module.exports = {
     polygon_mumbai: {
       url: "https://rpc-mumbai.maticvigil.com",
       accounts: [process.env.PRIVATE_KEY],
+      gas: 2100000,
+      gasPrice: 8000000000,
     },
   },
   etherscan: {

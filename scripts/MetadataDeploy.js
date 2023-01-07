@@ -7,14 +7,14 @@
 const hre = require("hardhat");
 
 async function main() {
-  const AvastarPrimeMinter = await hre.ethers.getContractFactory(
-    "AvastarPrimeMinter"
+  const AvastarMetadata = await hre.ethers.getContractFactory(
+    "AvastarMetadata"
   );
-  const avastarPrimeMinter = await AvastarPrimeMinter.deploy();
+  const avastarMetadata = await AvastarMetadata.deploy();
 
-  await avastarPrimeMinter.deployed();
+  await avastarMetadata.deployed();
 
-  console.log(`AvastarPrimeMinter eployed to ${avastarPrimeMinter.address}`);
+  console.log(`AvastarMetadata deployed to ${avastarMetadata.address}`);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
