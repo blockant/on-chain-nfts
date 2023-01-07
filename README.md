@@ -26,6 +26,17 @@ With script `npx hardhat run scripts/PrimeMinterDeploy.js`
 - [x] Deployed to Polygon Mumbai  
        AvastarPrimeMinter eployed to 0xC7bAC918F161630b07728C4fFe59e1e28E7eFFA8
 
+- [x] Verified on PolygonScan  
+       Nothing to compile
+      Successfully submitted source code for contract
+      contracts/AvastarPrimeMinter.sol:AvastarPrimeMinter at 0xC7bAC918F161630b07728C4fFe59e1e28E7eFFA8
+      for verification on the block explorer. Waiting for verification result...
+
+       Successfully verified contract AvastarPrimeMinter on Etherscan.
+       https://mumbai.polygonscan.com/address/0xC7bAC918F161630b07728C4fFe59e1e28E7eFFA8#code
+
+with script `npx hardhat verify 0xC7bAC918F161630b07728C4fFe59e1e28E7eFFA8 --network polygon_mumbai`
+
 With script `npx hardhat run scripts/PrimeMinterDeploy.js --network polygon_mumbai`
 
 # AvastarTeleporter
@@ -46,6 +57,17 @@ With script `npx hardhat run scripts/TelePorterDeploy.js`
 
 With script `npx hardhat run scripts/TeleporterDeploy.js --network polygon_mumbai`
 
+- [x] Verified on PolygonScan  
+       Nothing to compile
+      Successfully submitted source code for contract
+      contracts/AvastarTeleporter.sol:AvastarTeleporter at 0xa4212f7660C1AfC01B304e3F9afA3547146C104c
+      for verification on the block explorer. Waiting for verification result...
+
+       Successfully verified contract AvastarTeleporter on Etherscan.
+       https://mumbai.polygonscan.com/address/0xa4212f7660C1AfC01B304e3F9afA3547146C104c#code
+
+with script `npx hardhat verify 0xa4212f7660C1AfC01B304e3F9afA3547146C104c --network polygon_mumbai`
+
 # AvastarMetadata
 
 Taken the smart contract from [here](https://rinkeby.etherscan.io/address/0x64f241f435bb11a035d4e2c139068a2ed979bb39#code)
@@ -61,3 +83,15 @@ With script `npx hardhat run scripts/MetadatDeploy.js`
        AvastarTeleporter deployed to 0xCF92b0d6d462f6086f663abf57DEa4D72d45948F
 
 With script `npx hardhat run scripts/MetadataDeploy.js --network polygon_mumbai`
+
+- [x] Verfied on PolygonScan
+
+       Nothing to compile
+       Successfully submitted source code for contract
+       contracts/AvastarMetadata.sol:AvastarMetadata at 0xCF92b0d6d462f6086f663abf57DEa4D72d45948F
+       for verification on the block explorer. Waiting for verification result...
+
+       Successfully verified contract AvastarMetadata on Etherscan.
+       https://mumbai.polygonscan.com/address/0xCF92b0d6d462f6086f663abf57DEa4D72d45948F#code
+
+with script `npx hardhat verify 0xCF92b0d6d462f6086f663abf57DEa4D72d45948F --network polygon_mumbai`
