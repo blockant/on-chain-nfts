@@ -25,3 +25,15 @@ Taken the smart contract from [here](https://etherscan.io/address/0xff9c1b15b162
        Loot Contract Deployed 0x21106f617257f297E4dAAFDCF7bECF47edA194C0
 
 With script `npx hardhat run scripts/deployToMumbai.js --network polygon_mumbai`
+
+- [x] Verfied on PolygonScan
+
+       Compiled 1 Solidity file successfully
+       Successfully submitted source code for contract
+       contracts/Loot.sol:Loot at 0x21106f617257f297E4dAAFDCF7bECF47edA194C0
+       for verification on the block explorer. Waiting for verification result...
+
+       Successfully verified contract Loot on Etherscan.
+       https://mumbai.polygonscan.com/address/0x21106f617257f297E4dAAFDCF7bECF47edA194C0#code
+
+with script `npx hardhat verify 0x21106f617257f297E4dAAFDCF7bECF47edA194C0 --network polygon_mumbai`
