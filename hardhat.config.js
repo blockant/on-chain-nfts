@@ -1,3 +1,10 @@
+// require("@nomicfoundation/hardhat-toolbox");
+
+// /** @type import('hardhat/config').HardhatUserConfig */
+// module.exports = {
+//   solidity: "0.7.0",
+// };
+
 require("dotenv").config();
 require("@nomiclabs/hardhat-ethers");
 require("@nomiclabs/hardhat-etherscan");

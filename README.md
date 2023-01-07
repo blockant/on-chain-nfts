@@ -25,3 +25,14 @@ Taken the smart contract from [here](https://etherscan.io/address/0xbc4ca0eda764
       BoredApeYachtClub deployed to 0x0d48591ac4c604734E63856fABcB7D16fd9fdc1C
 
 With script `npx hardhat run scripts/deploy.js --network polygon_mumbai`
+
+- [x] Verified on PolygonScan
+
+       Successfully submitted source code for contract
+       contracts/BoredApeyatchClub.sol:BoredApeYachtClub at 0x0d48591ac4c604734E63856fABcB7D16fd9fdc1C
+       for verification on the block explorer. Waiting for verification result...
+
+       Successfully verified contract BoredApeYachtClub on Etherscan.
+       https://mumbai.polygonscan.com/address/0x0d48591ac4c604734E63856fABcB7D16fd9fdc1C#code
+
+with script `npx hardhat verify 0x0d48591ac4c604734E63856fABcB7D16fd9fdc1C "BoredApeYachtClub" "BAYC" "10000" "1619060439" --network polygon_mumbai`
