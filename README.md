@@ -11,3 +11,17 @@ GAS_REPORT=true npx hardhat test
 npx hardhat node
 npx hardhat run scripts/deploy.js
 ```
+
+# ForgottenRunes
+
+### ERROR:
+
+line no:155
+
+```
+function setBaseURI(string memory _newBaseURI) public onlyOwner {
+        _setBaseURI(_newBaseURI);
+    }
+```
+
+there's no such \_setBaseURI in any library that updates base URI of contract which is required at the time of deployement.

@@ -59,11 +59,13 @@ pragma solidity 0.8.13;
 pragma experimental ABIEncoderV2;
 
 import '@openzeppelin/contracts/token/ERC721/extensions/ERC721Burnable.sol';
+import '@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol';
+import '@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol';
 import '@openzeppelin/contracts/access/Ownable.sol';
 import '@openzeppelin/contracts/token/ERC20/IERC20.sol';
 import '@openzeppelin/contracts/utils/math/SafeMath.sol';
 
-contract ForgottenRunesWizardsCult is ERC721Burnable, Ownable {
+contract ForgottenRunesWizardsCult is ERC721Burnable, Ownable, ERC721Enumerable, ERC721URIStorage {
     using SafeMath for uint256;
     using SafeMath for uint8;
     uint256 public constant MAX_WIZARDS = 10000;
@@ -84,9 +86,22 @@ contract ForgottenRunesWizardsCult is ERC721Burnable, Ownable {
         setBaseURI(baseURI);
     }
 
+    //supportsInterface as two or more base classes define function with same name and parameter types.
+    function supportsInterface(bytes4 interfaceId) public view virtual override(ERC721, ERC721Enumerable, ERC721URIStorage) returns (bool) {
+        return super.supportsInterface(interfaceId);
+    }
+
     function summonStarted() public view returns (bool) {
         return block.number >= summonStartBlock;
     }
+
+    // And must override below three functions
+
+    function tokenOfOwnerByIndex(address owner, uint256 index) public view override returns (uint256) {}
+
+    function totalSupply() public view override returns (uint256) {}
+
+    function tokenByIndex(uint256 index) public view override returns (uint256) {}
 
     function summon(uint256 numWizards) public payable {
         require(summonStarted(), 'You act before your time');
